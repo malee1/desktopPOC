@@ -1,0 +1,27 @@
+{
+    "extends": [
+        "airbnb",
+        "prettier",
+        "prettier/react",
+        "react-app"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": [
+        "prettier"
+    ],
+    "rules": {
+        "prettier/prettier": "warn",
+        "react/jsx-filename-extension": 0,
+        "react/jsx-one-expression-per-line": 0 ,
+        "no-unused-vars": "warn",
+        "no-console": "off",
+        "func-names": "off",
+        "react/self-closing-comp": 0
+    }
+}
