@@ -1,7 +1,9 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, List, ListItem } from '@material-ui/core';
 import { AccountCircle, Phone, Event, Fingerprint } from '@material-ui/icons';
+import { panelOneLabels } from '../constants/panelLabels';
+import customer1 from '../constants/mockCustomerData';
 
 const useStyles = makeStyles({
   root: {
@@ -42,6 +44,12 @@ const useStyles = makeStyles({
 
 export default function PanelOne() {
   const classes = useStyles();
+
+  const labels = panelOneLabels;
+  const mockCustomer = customer1;
+
+  const [customer, setCustomer] = useState(mockCustomer);
+
   return (
     <div className={classes.root}>
       <Box bgcolor="primary.main">
@@ -52,12 +60,12 @@ export default function PanelOne() {
             </div>
             <div className={classes.labelContainer}>
               <Typography className={classes.label} variant="body1">
-                Name:
+                {labels.name}
               </Typography>
             </div>
             <div className={classes.labelValueContainer}>
               <Typography className={classes.labelValue} variant="body1">
-                Joe Bloggs
+                {customer.name}
               </Typography>
             </div>
           </ListItem>
@@ -67,12 +75,12 @@ export default function PanelOne() {
             </div>
             <div className={classes.labelContainer}>
               <Typography className={classes.label} variant="body1">
-                Date of Birth:
+                {labels.dob}
               </Typography>
             </div>
             <div className={classes.labelValueContainer}>
               <Typography className={classes.labelValue} variant="body1">
-                12345
+                {customer.dob}
               </Typography>
             </div>
           </ListItem>
@@ -82,12 +90,12 @@ export default function PanelOne() {
             </div>
             <div className={classes.labelContainer}>
               <Typography className={classes.label} variant="body1">
-                Unique Reference:
+                {labels.uRef}
               </Typography>
             </div>
             <div className={classes.labelValueContainer}>
               <Typography className={classes.labelValue} variant="body1">
-                67890
+                {customer.uRef}
               </Typography>
             </div>
           </ListItem>
@@ -97,12 +105,12 @@ export default function PanelOne() {
             </div>
             <div className={classes.labelContainer}>
               <Typography className={classes.label} variant="body1">
-                Tel:
+                {labels.tel}
               </Typography>
             </div>
             <div className={classes.labelValueContainer}>
               <Typography className={classes.labelValue} variant="body1">
-                123456789
+                {customer.tel}
               </Typography>
             </div>
           </ListItem>
