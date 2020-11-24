@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, List, ListItem } from '@material-ui/core';
 import { AccountCircle, Phone, Event, Fingerprint } from '@material-ui/icons';
@@ -48,7 +48,12 @@ export default function PanelOne() {
   const labels = panelOneLabels;
   const mockCustomer = customer1;
 
-  const [customer, setCustomer] = useState(mockCustomer);
+  const [customer, setCustomer] = useState({});
+
+  useEffect(() => {
+    setCustomer(mockCustomer);
+    // console.log(`log:  ${mockCustomer.name}`);
+  }, [mockCustomer]);
 
   return (
     <div className={classes.root}>
