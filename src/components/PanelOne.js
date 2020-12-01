@@ -4,7 +4,8 @@ import { Box, Typography, List, ListItem } from '@material-ui/core';
 import { AccountCircle, Phone, Event, Fingerprint } from '@material-ui/icons';
 import axios from 'axios';
 import { panelOneLabels } from '../constants/panelLabels';
-import customer1 from '../constants/mockCustomerData';
+import getcustomer from '../constants/api';
+// import customer1 from '../constants/mockCustomerData';
 
 const useStyles = makeStyles({
   root: {
@@ -47,24 +48,25 @@ export default function PanelOne() {
   const classes = useStyles();
 
   const labels = panelOneLabels;
-  const mockCustomer = customer1;
+  const url = getcustomer;
+  // const mockCustomer = customer1;
 
   const [customer, setCustomer] = useState({});
-  const [name, setName] = useState('');
+  // const [name, setName] = useState('');
 
   useEffect(() => {
-    setCustomer(mockCustomer);
+    // setCustomer(mockCustomer);
     const getName = async () => {
       try {
-        const response = await axios('http://localhost:3002/');
-        setName(response.data.name);
+        const response = await axios(url);
+        console.log(response.data);
+        setCustomer(response.data);
       } catch (error) {
         console.log(`Error ${error}`);
       }
     };
     getName();
-    console.log(`this is it${name}`);
-  }, [mockCustomer, name]);
+  }, [url]);
 
   return (
     <div className={classes.root}>
