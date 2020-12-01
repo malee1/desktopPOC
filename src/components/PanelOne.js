@@ -66,18 +66,6 @@ export default function PanelOne() {
     console.log(`this is it${name}`);
   }, [mockCustomer, name]);
 
-  //   setCustomer(mockCustomer);
-  //     const getName = async () => {
-  //     }
-  //       try{
-  //         const response = await axios.get('http://localhost:3002/');
-  //         setName(response.data.name);
-  //       } catch (error) {
-  //     console.log(`Error ${error}`);
-  //   }
-  //   console.log(`name in 1 is ${name}`);
-  // }, [mockCustomer, name]);
-
   return (
     <div className={classes.root}>
       <Box bgcolor="primary.main">
