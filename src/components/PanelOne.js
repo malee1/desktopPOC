@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, List, ListItem } from '@material-ui/core';
 import { AccountCircle, Phone, Event, Fingerprint } from '@material-ui/icons';
 import axios from 'axios';
+import { useSelector } from 'react-redux';
 import { panelOneLabels } from '../constants/panelLabels';
 import getcustomer from '../constants/api';
 // import customer1 from '../constants/mockCustomerData';
@@ -54,6 +55,8 @@ export default function PanelOne() {
   const [customer, setCustomer] = useState({});
   // const [name, setName] = useState('');
 
+  const test = useSelector((state) => state.getCustomer);
+
   useEffect(() => {
     // setCustomer(mockCustomer);
     const getName = async () => {
@@ -66,7 +69,8 @@ export default function PanelOne() {
       }
     };
     getName();
-  }, [url]);
+    console.log(`from redux + ${test}`);
+  }, [url, test]);
 
   return (
     <div className={classes.root}>
