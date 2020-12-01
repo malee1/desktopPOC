@@ -2,6 +2,7 @@ import { React, useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, List, ListItem } from '@material-ui/core';
 import { AccountCircle, Phone, Event, Fingerprint } from '@material-ui/icons';
+import axios from 'axios';
 import { panelOneLabels } from '../constants/panelLabels';
 import customer1 from '../constants/mockCustomerData';
 
@@ -49,11 +50,33 @@ export default function PanelOne() {
   const mockCustomer = customer1;
 
   const [customer, setCustomer] = useState({});
+  const [name, setName] = useState('');
 
   useEffect(() => {
     setCustomer(mockCustomer);
-    // console.log(`log:  ${mockCustomer.name}`);
-  }, [mockCustomer]);
+    const getName = async () => {
+      try {
+        const response = await axios('http://localhost:3002/');
+        setName(response.data.name);
+      } catch (error) {
+        console.log(`Error ${error}`);
+      }
+    };
+    getName();
+    console.log(`this is it${name}`);
+  }, [mockCustomer, name]);
+
+  //   setCustomer(mockCustomer);
+  //     const getName = async () => {
+  //     }
+  //       try{
+  //         const response = await axios.get('http://localhost:3002/');
+  //         setName(response.data.name);
+  //       } catch (error) {
+  //     console.log(`Error ${error}`);
+  //   }
+  //   console.log(`name in 1 is ${name}`);
+  // }, [mockCustomer, name]);
 
   return (
     <div className={classes.root}>
