@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, List, ListItem } from '@material-ui/core';
 import { AccountCircle, Phone, Event, Fingerprint } from '@material-ui/icons';
 import axios from 'axios';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { panelOneLabels } from '../constants/panelLabels';
 import getcustomer from '../constants/api';
 import { getCustomer } from '../redux/actions';
@@ -55,7 +55,6 @@ export default function PanelOne() {
 
   const [customer, setCustomer] = useState({});
 
-  const test = useSelector((state) => state.customer.customer.name);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -63,16 +62,15 @@ export default function PanelOne() {
     const getName = async () => {
       try {
         const response = await axios(url);
-        // console.log(response.data);
-        dispatch(getCustomer(response.data));
-        setCustomer(response.data);
-        console.log(`test is finally ${test}`);
+        // dispatch(getCustomer(response.data));
+        // setCustomer(response.data);
+        setCustomer(dispatch(getCustomer(response.data)));
       } catch (error) {
-        console.log(`Error ${error}`);
+        console.log(`Error getting customer data: ${error}`);
       }
     };
     getName();
-  }, [url, dispatch, test]);
+  }, [url, dispatch]);
 
   return (
     <div className={classes.root}>

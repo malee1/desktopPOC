@@ -1,7 +1,9 @@
-const getCustomerReducer = (state = { customer: { name: '' } }, action) => {
+import data from '../../constants/customerTemplate';
+
+const getCustomerReducer = (state = { data }, action) => {
   switch (action.type) {
     case 'GETCUSTOMER':
-      return { ...state, customer: action.payload };
+      return { ...state, data: action.payload };
     default:
       return state;
   }

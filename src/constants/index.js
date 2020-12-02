@@ -1,7 +1,7 @@
-import customerTemplate from './customerTemplate';
+import defaultState from './defaultState';
 
-const initialState = {
-  customerTemplate
+const data = {
+  defaultState
 };
 
-export default initialState;
+export default data;

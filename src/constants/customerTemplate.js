@@ -1,4 +1,4 @@
-const customer = {
+const data = {
   name: '',
   dob: '',
   uRef: '',
@@ -13,4 +13,4 @@ const customer = {
   auth: ''
 };
 
-export default customer;
+export default data;
