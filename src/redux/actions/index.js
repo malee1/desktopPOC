@@ -1,8 +1,7 @@
-const getCustomer = (customer) => {
+// eslint-disable-next-line import/prefer-default-export
+export const getCustomer = (custObject) => {
   return {
     type: 'GETCUSTOMER',
-    payload: customer
+    payload: custObject
   };
 };
-
-export default getCustomer;

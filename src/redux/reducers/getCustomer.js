@@ -1,7 +1,7 @@
-const getCustomerReducer = (state = 0, action) => {
+const getCustomerReducer = (state = { customer: { name: '' } }, action) => {
   switch (action.type) {
     case 'GETCUSTOMER':
-      return state + action.payload;
+      return { ...state, customer: action.payload };
     default:
       return state;
   }

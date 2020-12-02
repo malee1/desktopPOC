@@ -3,9 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, List, ListItem } from '@material-ui/core';
 import { AccountCircle, Phone, Event, Fingerprint } from '@material-ui/icons';
 import axios from 'axios';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { panelOneLabels } from '../constants/panelLabels';
 import getcustomer from '../constants/api';
+import { getCustomer } from '../redux/actions';
 // import customer1 from '../constants/mockCustomerData';
 
 const useStyles = makeStyles({
@@ -53,24 +54,25 @@ export default function PanelOne() {
   // const mockCustomer = customer1;
 
   const [customer, setCustomer] = useState({});
-  // const [name, setName] = useState('');
 
-  const test = useSelector((state) => state.getCustomer);
+  const test = useSelector((state) => state.customer.customer.name);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     // setCustomer(mockCustomer);
     const getName = async () => {
       try {
         const response = await axios(url);
-        console.log(response.data);
+        // console.log(response.data);
+        dispatch(getCustomer(response.data));
         setCustomer(response.data);
+        console.log(`test is finally ${test}`);
       } catch (error) {
         console.log(`Error ${error}`);
       }
     };
     getName();
-    console.log(`from redux + ${test}`);
-  }, [url, test]);
+  }, [url, dispatch, test]);
 
   return (
     <div className={classes.root}>
