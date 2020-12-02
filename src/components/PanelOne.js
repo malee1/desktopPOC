@@ -1,13 +1,9 @@
-import { React, useState, useEffect } from 'react';
+import { React } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, List, ListItem } from '@material-ui/core';
 import { AccountCircle, Phone, Event, Fingerprint } from '@material-ui/icons';
-import axios from 'axios';
-import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { panelOneLabels } from '../constants/panelLabels';
-import getcustomer from '../constants/api';
-import { getCustomer } from '../redux/actions';
-// import customer1 from '../constants/mockCustomerData';
 
 const useStyles = makeStyles({
   root: {
@@ -50,27 +46,8 @@ export default function PanelOne() {
   const classes = useStyles();
 
   const labels = panelOneLabels;
-  const url = getcustomer;
-  // const mockCustomer = customer1;
 
-  const [customer, setCustomer] = useState({});
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    // setCustomer(mockCustomer);
-    const getName = async () => {
-      try {
-        const response = await axios(url);
-        dispatch(getCustomer(response.data));
-        setCustomer(response.data);
-        // setCustomer(dispatch(getCustomer(response.data)));
-      } catch (error) {
-        console.log(`Error getting customer data: ${error}`);
-      }
-    };
-    getName();
-  }, [url, dispatch]);
+  const customer = useSelector((state) => state.customer.data);
 
   return (
     <div className={classes.root}>

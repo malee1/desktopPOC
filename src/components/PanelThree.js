@@ -1,9 +1,9 @@
-import { React, useState, useEffect } from 'react';
+import { React } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, List, ListItem } from '@material-ui/core';
 import { Notes, Announcement, Notifications, CheckBox } from '@material-ui/icons';
+import { useSelector } from 'react-redux';
 import { panelThreeLabels } from '../constants/panelLabels';
-import customer1 from '../constants/mockCustomerData';
 
 const useStyles = makeStyles({
   root: {
@@ -46,13 +46,8 @@ export default function PanelOne() {
   const classes = useStyles();
 
   const labels = panelThreeLabels;
-  const mockCustomer = customer1;
 
-  const [customer, setCustomer] = useState({});
-
-  useEffect(() => {
-    setCustomer(mockCustomer);
-  }, [mockCustomer]);
+  const customer = useSelector((state) => state.customer.data);
 
   return (
     <div className={classes.root}>
