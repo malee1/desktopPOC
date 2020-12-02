@@ -11,6 +11,9 @@ const useStyles = makeStyles({
     flexGrow: 1,
     padding: '5px'
   },
+  box: {
+    width: '27vw'
+  },
   list: {
     flexDirection: 'column',
     whiteSpace: 'nowrap'
@@ -59,7 +62,7 @@ export default function PanelOne() {
 
   return (
     <div className={classes.root}>
-      <Box bgcolor="primary.main">
+      <Box className={classes.box} bgcolor="primary.main">
         <List className={classes.list}>
           <ListItem className={classes.listItem}>
             <div className={classes.iconContainer}>

@@ -1,3 +1,3 @@
-const getCustomer = 'http://localhost:3002/getcustomer';
+const getCustomerApi = 'http://localhost:3002/getcustomer';
 
-export default getCustomer;
+export default getCustomerApi;

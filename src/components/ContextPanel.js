@@ -6,7 +6,7 @@ import Logo from './Logo';
 import PanelOne from './PanelOne';
 import PanelTwo from './PanelTwo';
 import PanelThree from './PanelThree';
-import getcustomer from '../constants/api';
+import getcustomerApi from '../constants/api';
 import { getCustomer } from '../redux/actions';
 
 const useStyles = makeStyles({
@@ -29,7 +29,7 @@ const useStyles = makeStyles({
 export default function ContextPanel() {
   const classes = useStyles();
 
-  const url = getcustomer;
+  const url = getcustomerApi;
 
   const dispatch = useDispatch();
 
