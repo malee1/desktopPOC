@@ -62,9 +62,9 @@ export default function PanelOne() {
     const getName = async () => {
       try {
         const response = await axios(url);
-        // dispatch(getCustomer(response.data));
-        // setCustomer(response.data);
-        setCustomer(dispatch(getCustomer(response.data)));
+        dispatch(getCustomer(response.data));
+        setCustomer(response.data);
+        // setCustomer(dispatch(getCustomer(response.data)));
       } catch (error) {
         console.log(`Error getting customer data: ${error}`);
       }
