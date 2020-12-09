@@ -1,15 +1,14 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Typography, List, ListItem, Collapse, Button } from '@material-ui/core';
+import { Box, Typography, List, ListItem } from '@material-ui/core';
 import { AccountCircle, Phone, Event, Fingerprint } from '@material-ui/icons';
 import { useSelector } from 'react-redux';
 import { panelOneLabels } from '../constants/panelLabels';
-import DropDownPanel from './DropDownPanel';
 
 const useStyles = makeStyles({
   root: {
     flexGrow: 1,
-    padding: '5px'
+    paddingTop: '5px'
   },
   box: {
     width: '27vw'
@@ -19,10 +18,6 @@ const useStyles = makeStyles({
     whiteSpace: 'nowrap'
   },
   listItem: {
-    backgroundColor: 'white'
-  },
-  listItemButton: {
-    justifyContent: 'flex-end',
     backgroundColor: 'white'
   },
   iconContainer: {
@@ -47,29 +42,12 @@ const useStyles = makeStyles({
   labelValue: {
     backgroundColor: 'white',
     paddingLeft: '5px'
-  },
-  test: {
-    // backgroundColor: 'grey',
-    zIndex: '1000',
-    position: 'absolute',
-    height: '15vh',
-    width: '27vw'
-  },
-  panelButton: {
-    height: '30px',
-    justifyContent: 'flex-end'
   }
 });
 
 export default function PanelOne() {
   const classes = useStyles();
   const labels = panelOneLabels;
-
-  const [open, setOpen] = useState(false);
-
-  const handleDropDown = () => {
-    setOpen(!open);
-  };
 
   const customer = useSelector((state) => state.customer.data);
 
@@ -137,22 +115,7 @@ export default function PanelOne() {
               </Typography>
             </div>
           </ListItem>
-          <ListItem className={classes.listItemButton}>
-            <Button
-              className={classes.panelButton}
-              onClick={handleDropDown}
-              variant="contained"
-              color="secondary"
-            >
-              More Info
-            </Button>
-          </ListItem>
         </List>
-        <Collapse in={open} timeout="auto" unmountOnExit>
-          <div className={classes.test}>
-            <DropDownPanel />
-          </div>
-        </Collapse>
       </Box>
     </div>
   );
