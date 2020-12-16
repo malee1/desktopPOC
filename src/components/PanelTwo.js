@@ -1,9 +1,10 @@
-import { React } from 'react';
+import { React, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Typography, List, ListItem } from '@material-ui/core';
-import { AccessTime, RecordVoiceOver, Help, Mic } from '@material-ui/icons';
+import { Box, Typography, List, ListItem, Button, Collapse } from '@material-ui/core';
+import { AccessTime, RecordVoiceOver, Help, Mic, ArrowDropDown } from '@material-ui/icons';
 import { useSelector } from 'react-redux';
 import { panelTwoLabels } from '../constants/panelLabels';
+import DropDownPanel from './DropDownPanel';
 // import customer1 from '../constants/mockCustomerData';
 
 const useStyles = makeStyles({
@@ -20,6 +21,11 @@ const useStyles = makeStyles({
   },
   listItem: {
     backgroundColor: 'white'
+  },
+  listItemButton: {
+    justifyContent: 'flex-end',
+    backgroundColor: 'white',
+    display: 'flex'
   },
   iconContainer: {
     width: '8%',
@@ -43,6 +49,16 @@ const useStyles = makeStyles({
   labelValue: {
     backgroundColor: 'white',
     paddingLeft: '5px'
+  },
+  dropDown: {
+    // backgroundColor: 'grey',
+    zIndex: '1000',
+    position: 'absolute',
+    height: '15vh',
+    width: '27vw'
+  },
+  panelButton: {
+    height: '30px'
   }
 });
 
@@ -59,6 +75,12 @@ export default function PanelOne() {
   // useEffect(() => {
   //   setCustomer(mockCustomer);
   // }, [mockCustomer]);
+
+  const [open, setOpen] = useState(false);
+
+  const handleDropDown = () => {
+    setOpen(!open);
+  };
 
   return (
     <div className={classes.root}>
@@ -124,7 +146,23 @@ export default function PanelOne() {
               </Typography>
             </div>
           </ListItem>
+          <ListItem className={classes.listItemButton}>
+            <Button
+              className={classes.panelButton}
+              onClick={handleDropDown}
+              variant="contained"
+              color="secondary"
+            >
+              More Context
+              <ArrowDropDown />
+            </Button>
+          </ListItem>
         </List>
+        <Collapse in={open} timeout="auto" unmountOnExit>
+          <div className={classes.dropDown}>
+            <DropDownPanel />
+          </div>
+        </Collapse>
       </Box>
     </div>
   );

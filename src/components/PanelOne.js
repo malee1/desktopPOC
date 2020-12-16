@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, List, ListItem, Collapse, Button } from '@material-ui/core';
-import { AccountCircle, Phone, Event, Fingerprint } from '@material-ui/icons';
+import { AccountCircle, Phone, Event, Fingerprint, ArrowDropDown } from '@material-ui/icons';
 import { useSelector } from 'react-redux';
 import { panelOneLabels } from '../constants/panelLabels';
 import DropDownPanel from './DropDownPanel';
@@ -23,7 +23,8 @@ const useStyles = makeStyles({
   },
   listItemButton: {
     justifyContent: 'flex-end',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    display: 'flex'
   },
   iconContainer: {
     width: '8%',
@@ -48,7 +49,7 @@ const useStyles = makeStyles({
     backgroundColor: 'white',
     paddingLeft: '5px'
   },
-  test: {
+  dropDown: {
     // backgroundColor: 'grey',
     zIndex: '1000',
     position: 'absolute',
@@ -56,8 +57,7 @@ const useStyles = makeStyles({
     width: '27vw'
   },
   panelButton: {
-    height: '30px',
-    justifyContent: 'flex-end'
+    height: '30px'
   }
 });
 
@@ -144,12 +144,15 @@ export default function PanelOne() {
               variant="contained"
               color="secondary"
             >
-              More Info
+              <Typography className={classes.buttonLabel} variant="body2">
+                More Info
+              </Typography>
+              <ArrowDropDown className={classes.dropDownIcon} />
             </Button>
           </ListItem>
         </List>
         <Collapse in={open} timeout="auto" unmountOnExit>
-          <div className={classes.test}>
+          <div className={classes.dropDown}>
             <DropDownPanel />
           </div>
         </Collapse>

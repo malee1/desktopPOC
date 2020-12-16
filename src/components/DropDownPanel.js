@@ -1,9 +1,9 @@
 import { React } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, List, ListItem } from '@material-ui/core';
-import { AccountCircle, Phone, Event, Fingerprint } from '@material-ui/icons';
-import { useSelector } from 'react-redux';
-import { panelOneLabels } from '../constants/panelLabels';
+import { Info } from '@material-ui/icons';
+// import { useSelector } from 'react-redux';
+// import { panelOneLabels } from '../constants/panelLabels';
 
 const useStyles = makeStyles({
   root: {
@@ -47,9 +47,6 @@ const useStyles = makeStyles({
 
 export default function PanelOne() {
   const classes = useStyles();
-  const labels = panelOneLabels;
-
-  const customer = useSelector((state) => state.customer.data);
 
   return (
     <div className={classes.root}>
@@ -57,61 +54,61 @@ export default function PanelOne() {
         <List className={classes.list}>
           <ListItem className={classes.listItem}>
             <div className={classes.iconContainer}>
-              <AccountCircle className={classes.icon} />
+              <Info className={classes.icon} />
             </div>
             <div className={classes.labelContainer}>
               <Typography className={classes.label} variant="body1">
-                {labels.name}
+                More Info:
               </Typography>
             </div>
             <div className={classes.labelValueContainer}>
               <Typography className={classes.labelValue} variant="body1">
-                {customer.name}
+                Panel A
               </Typography>
             </div>
           </ListItem>
           <ListItem className={classes.listItem}>
             <div className={classes.iconContainer}>
-              <Event className={classes.icon} />
+              <Info className={classes.icon} />
             </div>
             <div className={classes.labelContainer}>
               <Typography className={classes.label} variant="body1">
-                {labels.dob}
+                More Info:
               </Typography>
             </div>
             <div className={classes.labelValueContainer}>
               <Typography className={classes.labelValue} variant="body1">
-                {customer.dob}
+                Panel A
               </Typography>
             </div>
           </ListItem>
           <ListItem className={classes.listItem}>
             <div className={classes.iconContainer}>
-              <Fingerprint className={classes.icon} />
+              <Info className={classes.icon} />
             </div>
             <div className={classes.labelContainer}>
               <Typography className={classes.label} variant="body1">
-                {labels.uRef}
+                More Info:
               </Typography>
             </div>
             <div className={classes.labelValueContainer}>
               <Typography className={classes.labelValue} variant="body1">
-                {customer.uRef}
+                Panel A
               </Typography>
             </div>
           </ListItem>
           <ListItem className={classes.listItem}>
             <div className={classes.iconContainer}>
-              <Phone className={classes.icon} />
+              <Info className={classes.icon} />
             </div>
             <div className={classes.labelContainer}>
               <Typography className={classes.label} variant="body1">
-                {labels.tel}
+                More Info:
               </Typography>
             </div>
             <div className={classes.labelValueContainer}>
               <Typography className={classes.labelValue} variant="body1">
-                {customer.tel}
+                Panel A
               </Typography>
             </div>
           </ListItem>
