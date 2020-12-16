@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import getCustomerReducer from './getCustomer';
+import getCustomer from './getCustomer';
+import getUrl from './getURL';
 
 const rootReducer = combineReducers({
-  customer: getCustomerReducer
+  customer: getCustomer,
+  iFrame: getUrl
 });
 
 export default rootReducer;

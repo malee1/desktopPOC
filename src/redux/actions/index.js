@@ -5,3 +5,10 @@ export const getCustomer = (custObject) => {
     payload: custObject
   };
 };
+
+export const getUrl = (url) => {
+  return {
+    type: 'GETURL',
+    payload: url
+  };
+};

@@ -1,6 +1,8 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button, ButtonGroup, Typography } from '@material-ui/core';
+import { getUrl } from '../redux/actions';
 
 const useStyles = makeStyles({
   root: {
@@ -18,11 +20,25 @@ const useStyles = makeStyles({
 
 export default function AppBar() {
   const classes = useStyles();
+
+  const newUrl = 'https://www.ukclimbing.com/';
+
+  const dispatch = useDispatch();
+
+  const handleButtonClick = () => {
+    dispatch(getUrl(newUrl));
+  };
+
   return (
     <div className={classes.root}>
       <Typography>App Bar</Typography>
       <ButtonGroup className={classes.buttonGroup} orientation="vertical" color="primary">
-        <Button className={classes.button} variant="contained" color="primary">
+        <Button
+          className={classes.button}
+          variant="contained"
+          color="primary"
+          onClick={handleButtonClick}
+        >
           One
         </Button>
         <Button className={classes.button} variant="contained" color="primary">

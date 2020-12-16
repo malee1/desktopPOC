@@ -1,5 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { useSelector } from 'react-redux';
+// import defaultUrl from '../constants/defaultUrl';
 
 const useStyles = makeStyles({
   root: {
@@ -12,11 +14,14 @@ const useStyles = makeStyles({
 
 export default function IFrame() {
   const classes = useStyles();
+
+  const url = useSelector((state) => state.iFrame.iFrameUrl);
+
   return (
     <div className={classes.root}>
       <iframe
         title="title"
-        src="https://freeklime.co.uk"
+        src={url}
         allowFullScreen
         allow="encryted-media"
         height="100%"
