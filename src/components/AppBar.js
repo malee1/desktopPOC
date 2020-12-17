@@ -1,9 +1,8 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button, ButtonGroup, Typography } from '@material-ui/core';
 import { setIFrame } from '../redux/actions';
-import urls from '../constants/urls';
 
 const useStyles = makeStyles({
   root: {
@@ -22,7 +21,8 @@ const useStyles = makeStyles({
 export default function AppBar() {
   const classes = useStyles();
 
-  const { buttonOne, buttonTwo } = urls;
+  const buttonOne = useSelector((state) => state.urls.urls.urlOne);
+  const buttonTwo = useSelector((state) => state.urls.urls.urlTwo);
 
   const dispatch = useDispatch();
 

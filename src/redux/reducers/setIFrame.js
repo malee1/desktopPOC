@@ -1,6 +1,4 @@
-import url from '../../constants/urls';
-
-const iFrameUrl = url.buttonOne.url;
+const iFrameUrl = '';
 
 const setIFrame = (state = { iFrameUrl }, action) => {
   switch (action.type) {

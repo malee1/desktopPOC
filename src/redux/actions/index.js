@@ -12,3 +12,10 @@ export const setIFrame = (url) => {
     payload: url
   };
 };
+
+export const getUrls = (urls) => {
+  return {
+    type: 'GETURLS',
+    payload: urls
+  };
+};
