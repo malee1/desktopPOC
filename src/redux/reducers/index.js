@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import getCustomer from './getCustomer';
-import getUrl from './getURL';
+import setIFrame from './setIFrame';
 
 const rootReducer = combineReducers({
   customer: getCustomer,
-  iFrame: getUrl
+  iFrame: setIFrame
 });
 
 export default rootReducer;

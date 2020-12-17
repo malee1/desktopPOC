@@ -6,9 +6,9 @@ export const getCustomer = (custObject) => {
   };
 };
 
-export const getUrl = (url) => {
+export const setIFrame = (url) => {
   return {
-    type: 'GETURL',
+    type: 'SETIFRAME',
     payload: url
   };
 };
