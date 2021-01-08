@@ -6,8 +6,9 @@ import Logo from './Logo';
 import PanelOne from './PanelOne';
 import PanelTwo from './PanelTwo';
 import PanelThree from './PanelThree';
-import { getCustomerApi } from '../constants/api';
-import { getCustomer } from '../redux/actions';
+import { getCustomerApi, getUserApi } from '../constants/api';
+import { getCustomer, getUser } from '../redux/actions';
+import user from '../constants/user';
 
 const useStyles = makeStyles({
   root: {
@@ -30,21 +31,34 @@ const useStyles = makeStyles({
 export default function ContextPanel() {
   const classes = useStyles();
 
-  const url = getCustomerApi;
+  const customerUrl = getCustomerApi;
+  const userUrl = getUserApi;
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     const getCustomerData = async () => {
       try {
-        const response = await axios(url);
+        const response = await axios(customerUrl);
         dispatch(getCustomer(response.data));
       } catch (error) {
         console.log(`Error getting customer data: ${error}`);
       }
     };
     getCustomerData();
-  }, [url, dispatch]);
+  }, [customerUrl, dispatch]);
+
+  useEffect(() => {
+    const getUserData = async () => {
+      try {
+        const response = await axios.post(userUrl, user);
+        dispatch(getUser(response.data));
+      } catch (error) {
+        console.log(`Error getting user data: ${error}`);
+      }
+    };
+    getUserData();
+  }, [userUrl, dispatch]);
 
   return (
     <div className={classes.root}>

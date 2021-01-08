@@ -1,41 +1,32 @@
 /*
-This file is used to set the user of the POC - one user is permitted at a time, ensure only one user is uncommented and that user
-is exported and set in the redux store as the current user - all role profiles and bolt ons are set to null
+This file is used to set the user of the POC
+One user is permitted at a time, ensure only one user is uncommented
+The uncommented user is exported and set in the redux store as the current user of the app
 */
 
 // initial user
 const user = {
-  fileId: '123456',
-  roleProfile: null,
-  boltOn: null
+  fileId: '123456'
 };
 
 // business =unit =gamma user
 // const user = {
-//   fileId: '234567',
-//   roleProfile: null,
-//   boltOn: null
+//   fileId: '234567'
 // };
 
 // supervisor user
 // const user = {
-//   fileId: '345678',
-//   roleProfile: null,
-//   boltOn: null
+//   fileId: '345678'
 // };
 
 // additional skillset user
 // const user = {
-//   fileId: '456789',
-//   roleProfile: null,
-//   boltOn: null
+//   fileId: '456789'
 // };
 
 // accessibility user
 // const user = {
-//   fileId: '567890',
-//   roleProfile: null,
-//   boltOn: null
+//   fileId: '567890'
 // };
 
 export default user;

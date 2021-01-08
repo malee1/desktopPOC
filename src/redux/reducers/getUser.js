@@ -1,9 +1,9 @@
-import user from '../../constants/user';
+import data from '../../constants/user';
 
-const getUser = (state = user, action) => {
+const getUser = (state = { data }, action) => {
   switch (action.type) {
     case 'GETUSER':
-      return { ...state, user: action.payload };
+      return { ...state, data: action.payload };
     default:
       return state;
   }
