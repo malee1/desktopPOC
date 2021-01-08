@@ -6,6 +6,10 @@ const urls = {
   urlTwo: {
     name: '',
     url: ''
+  },
+  urlThree: {
+    name: '',
+    url: ''
   }
 };
 

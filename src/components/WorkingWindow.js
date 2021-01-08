@@ -33,9 +33,9 @@ export default function WorkingWindow() {
     const getUrlData = async () => {
       try {
         const response = await axios(url);
-        console.log(response.data);
+        // console.log(response.data);
         dispatch(getUrls(response.data));
-        console.log(response.data.urlOne.url);
+        // console.log(response.data.urlOne.url);
         dispatch(setIFrame(response.data.urlOne.url));
       } catch (error) {
         console.log(`Error getting url data: ${error}`);

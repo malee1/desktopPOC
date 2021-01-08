@@ -6,7 +6,7 @@ import Logo from './Logo';
 import PanelOne from './PanelOne';
 import PanelTwo from './PanelTwo';
 import PanelThree from './PanelThree';
-import getcustomerApi from '../constants/api';
+import { getCustomerApi } from '../constants/api';
 import { getCustomer } from '../redux/actions';
 
 const useStyles = makeStyles({
@@ -18,7 +18,8 @@ const useStyles = makeStyles({
   },
   logoContainer: {
     minWidth: '15vw',
-    display: 'flex'
+    display: 'flex',
+    marginTop: '15px'
   },
   panelContainer: {
     flexGrow: 10,
@@ -29,7 +30,7 @@ const useStyles = makeStyles({
 export default function ContextPanel() {
   const classes = useStyles();
 
-  const url = getcustomerApi;
+  const url = getCustomerApi;
 
   const dispatch = useDispatch();
 

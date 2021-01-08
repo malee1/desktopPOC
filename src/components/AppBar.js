@@ -23,6 +23,7 @@ export default function AppBar() {
 
   const buttonOne = useSelector((state) => state.urls.urls.urlOne);
   const buttonTwo = useSelector((state) => state.urls.urls.urlTwo);
+  const buttonThree = useSelector((state) => state.urls.urls.urlThree);
 
   const dispatch = useDispatch();
 
@@ -32,6 +33,10 @@ export default function AppBar() {
 
   const handleButtonTwoClick = () => {
     dispatch(setIFrame(`${buttonTwo.url}`));
+  };
+
+  const handleButtonThreeClick = () => {
+    dispatch(setIFrame(`${buttonThree.url}`));
   };
 
   return (
@@ -54,11 +59,13 @@ export default function AppBar() {
         >
           {buttonTwo.name}
         </Button>
-        <Button className={classes.button} variant="contained" color="primary">
-          Three
-        </Button>
-        <Button className={classes.button} variant="contained" color="primary">
-          Four
+        <Button
+          className={classes.button}
+          variant="contained"
+          color="primary"
+          onClick={handleButtonThreeClick}
+        >
+          {buttonThree.name}
         </Button>
       </ButtonGroup>
     </div>

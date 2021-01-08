@@ -19,3 +19,10 @@ export const getUrls = (urls) => {
     payload: urls
   };
 };
+
+export const getUser = (user) => {
+  return {
+    type: 'GETUSER',
+    payload: user
+  };
+};
