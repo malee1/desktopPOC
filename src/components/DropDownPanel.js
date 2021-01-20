@@ -45,7 +45,7 @@ const useStyles = makeStyles({
   }
 });
 
-export default function PanelOne() {
+export default function DropDownPanel() {
   const classes = useStyles();
 
   return (

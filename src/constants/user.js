@@ -5,14 +5,14 @@ The uncommented user is exported and set in the redux store as the current user 
 */
 
 // initial user
-const user = {
-  fileId: '123456'
-};
+// const user = {
+//   fileId: '123456'
+// };
 
 // business =unit =gamma user
-// const user = {
-//   fileId: '234567'
-// };
+const user = {
+  fileId: '234567'
+};
 
 // supervisor user
 // const user = {

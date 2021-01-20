@@ -1,16 +1,14 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Typography, List, ListItem, Button, Collapse } from '@material-ui/core';
-import { AccessTime, RecordVoiceOver, Help, Mic, ArrowDropDown } from '@material-ui/icons';
-import { useSelector } from 'react-redux';
-import { panelTwoLabels } from '../constants/panelLabels';
-import DropDownPanel from './DropDownPanel';
-import DropDownPanel2 from './DropDownPanel2';
+import { Box, Typography, List, ListItem } from '@material-ui/core';
+import { Info } from '@material-ui/icons';
+// import { useSelector } from 'react-redux';
+// import { panelOneLabels } from '../constants/panelLabels';
 
 const useStyles = makeStyles({
   root: {
     flexGrow: 1,
-    padding: '5px'
+    paddingTop: '5px'
   },
   box: {
     width: '27vw'
@@ -21,11 +19,6 @@ const useStyles = makeStyles({
   },
   listItem: {
     backgroundColor: 'white'
-  },
-  listItemButton: {
-    justifyContent: 'flex-end',
-    backgroundColor: 'white',
-    display: 'flex'
   },
   iconContainer: {
     width: '8%',
@@ -48,40 +41,13 @@ const useStyles = makeStyles({
   },
   labelValue: {
     backgroundColor: 'white',
-    paddingLeft: '5px'
-  },
-  dropDown: {
-    // backgroundColor: 'grey',
-    zIndex: '1000',
-    position: 'absolute',
-    height: '15vh',
-    width: '27vw'
-  },
-  panelButton: {
-    height: '30px'
+    paddingLeft: '5px',
+    color: 'red'
   }
 });
 
 export default function PanelOne() {
   const classes = useStyles();
-
-  const labels = panelTwoLabels;
-
-  const customer = useSelector((state) => state.customer.data);
-  const user = useSelector((state) => state.user.data.roleProfile);
-
-  const [open, setOpen] = useState(false);
-
-  const handleDropDown = () => {
-    setOpen(!open);
-  };
-
-  let dropDown;
-  if (user === 'Gamma') {
-    dropDown = <DropDownPanel2 />;
-  } else {
-    dropDown = <DropDownPanel />;
-  }
 
   return (
     <div className={classes.root}>
@@ -89,79 +55,65 @@ export default function PanelOne() {
         <List className={classes.list}>
           <ListItem className={classes.listItem}>
             <div className={classes.iconContainer}>
-              <AccessTime className={classes.icon} />
+              <Info className={classes.icon} />
             </div>
             <div className={classes.labelContainer}>
               <Typography className={classes.label} variant="body1">
-                {labels.time}
+                More Info:
               </Typography>
             </div>
             <div className={classes.labelValueContainer}>
               <Typography className={classes.labelValue} variant="body1">
-                {customer.timeWait}
+                Panel B
               </Typography>
             </div>
           </ListItem>
           <ListItem className={classes.listItem}>
             <div className={classes.iconContainer}>
-              <Help className={classes.icon} />
+              <Info className={classes.icon} />
             </div>
             <div className={classes.labelContainer}>
               <Typography className={classes.label} variant="body1">
-                {labels.context}
+                More Info:
               </Typography>
             </div>
             <div className={classes.labelValueContainer}>
               <Typography className={classes.labelValue} variant="body1">
-                {customer.context}
+                Panel B
               </Typography>
             </div>
           </ListItem>
           <ListItem className={classes.listItem}>
             <div className={classes.iconContainer}>
-              <Mic className={classes.icon} />
+              <Info className={classes.icon} />
             </div>
             <div className={classes.labelContainer}>
               <Typography className={classes.label} variant="body1">
-                {labels.rec}
+                More Info:
               </Typography>
             </div>
             <div className={classes.labelValueContainer}>
               <Typography className={classes.labelValue} variant="body1">
-                {customer.recording}
+                Panel B
               </Typography>
             </div>
           </ListItem>
           <ListItem className={classes.listItem}>
             <div className={classes.iconContainer}>
-              <RecordVoiceOver className={classes.icon} />
+              <Info className={classes.icon} />
             </div>
             <div className={classes.labelContainer}>
               <Typography className={classes.label} variant="body1">
-                {labels.info}
+                More Info:
               </Typography>
             </div>
             <div className={classes.labelValueContainer}>
               <Typography className={classes.labelValue} variant="body1">
-                {customer.callInfo}
+                Panel B
               </Typography>
             </div>
-          </ListItem>
-          <ListItem className={classes.listItemButton}>
-            <Button
-              className={classes.panelButton}
-              onClick={handleDropDown}
-              variant="contained"
-              color="secondary"
-            >
-              More Context
-              <ArrowDropDown />
-            </Button>
           </ListItem>
         </List>
-        <Collapse in={open} timeout="auto" unmountOnExit>
-          <div className={classes.dropDown}>{dropDown}</div>
-        </Collapse>
       </Box>
     </div>
   );
