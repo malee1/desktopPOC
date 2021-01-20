@@ -1,25 +1,29 @@
 import { React, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import AppBar from './AppBar';
 import IFrame from './IFrame';
+import SupervisorPanel from './SupervisorPanel';
 import { getUrlsApi } from '../constants/api';
 import { getUrls, setIFrame } from '../redux/actions';
 
 const useStyles = makeStyles({
   root: {
-    height: '80vh',
+    height: '75vh',
     display: 'flex',
     padding: '5px'
   },
   appBarContainer: {
+    margin: '0px',
+    padding: '0px',
     minWidth: '15vw',
     backgroundColor: 'lightGrey'
   },
   iFrameContainer: {
-    flexGrow: 16
-  }
+    flexGrow: 1
+  },
+  boltOn: {}
 });
 
 export default function WorkingWindow() {
@@ -28,6 +32,11 @@ export default function WorkingWindow() {
   const url = getUrlsApi;
 
   const dispatch = useDispatch();
+  const boltOn = useSelector((state) => state.user.data.boltOn);
+  let showSupervisorPanel;
+  if (boltOn === 'Supervisor') {
+    showSupervisorPanel = true;
+  } else showSupervisorPanel = false;
 
   useEffect(() => {
     const getUrlData = async () => {
@@ -52,6 +61,8 @@ export default function WorkingWindow() {
       <div className={classes.iFrameContainer}>
         <IFrame />
       </div>
+      {showSupervisorPanel && <SupervisorPanel />}
+      <div className={classes.workingWindow}></div>
     </div>
   );
 }
