@@ -74,15 +74,15 @@ export default function PanelOne() {
   const customer = useSelector((state) => state.customer.data);
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid="panel-one">
       <Box className={classes.box} bgcolor="primary.main">
         <List className={classes.list}>
-          <ListItem className={classes.listItem}>
+          <ListItem className={classes.listItem} data-testid="item">
             <div className={classes.iconContainer}>
               <AccountCircle className={classes.icon} />
             </div>
             <div className={classes.labelContainer}>
-              <Typography className={classes.label} variant="body1">
+              <Typography className={classes.label} variant="body1" data-testid="aaa">
                 {labels.name}
               </Typography>
             </div>
@@ -92,7 +92,7 @@ export default function PanelOne() {
               </Typography>
             </div>
           </ListItem>
-          <ListItem className={classes.listItem}>
+          <ListItem className={classes.listItem} data-testid="item">
             <div className={classes.iconContainer}>
               <Event className={classes.icon} />
             </div>
@@ -107,7 +107,7 @@ export default function PanelOne() {
               </Typography>
             </div>
           </ListItem>
-          <ListItem className={classes.listItem}>
+          <ListItem className={classes.listItem} data-testid="item">
             <div className={classes.iconContainer}>
               <Fingerprint className={classes.icon} />
             </div>
@@ -122,7 +122,7 @@ export default function PanelOne() {
               </Typography>
             </div>
           </ListItem>
-          <ListItem className={classes.listItem}>
+          <ListItem className={classes.listItem} data-testid="item">
             <div className={classes.iconContainer}>
               <Phone className={classes.icon} />
             </div>

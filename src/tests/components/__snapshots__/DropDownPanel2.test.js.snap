@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the panel renders matches the snapshot 1`] = `
+<div
+  className="makeStyles-root-1"
+  data-testid="drop-down-panel-2"
+>
+  <div
+    className="MuiBox-root MuiBox-root-11 makeStyles-box-2"
+  >
+    <ul
+      className="MuiList-root makeStyles-list-3 MuiList-padding"
+    >
+      <li
+        className="MuiListItem-root makeStyles-listItem-4 MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="makeStyles-iconContainer-5"
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root makeStyles-icon-6"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+            />
+          </svg>
+        </div>
+        <div
+          className="makeStyles-labelContainer-7"
+        >
+          <p
+            className="MuiTypography-root makeStyles-label-8 MuiTypography-body1"
+          >
+            More Info:
+          </p>
+        </div>
+        <div
+          className="makeStyles-labelValueContainer-9"
+        >
+          <p
+            className="MuiTypography-root makeStyles-labelValue-10 MuiTypography-body1"
+          >
+            Panel B
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root makeStyles-listItem-4 MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="makeStyles-iconContainer-5"
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root makeStyles-icon-6"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+            />
+          </svg>
+        </div>
+        <div
+          className="makeStyles-labelContainer-7"
+        >
+          <p
+            className="MuiTypography-root makeStyles-label-8 MuiTypography-body1"
+          >
+            More Info:
+          </p>
+        </div>
+        <div
+          className="makeStyles-labelValueContainer-9"
+        >
+          <p
+            className="MuiTypography-root makeStyles-labelValue-10 MuiTypography-body1"
+          >
+            Panel B
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root makeStyles-listItem-4 MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="makeStyles-iconContainer-5"
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root makeStyles-icon-6"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+            />
+          </svg>
+        </div>
+        <div
+          className="makeStyles-labelContainer-7"
+        >
+          <p
+            className="MuiTypography-root makeStyles-label-8 MuiTypography-body1"
+          >
+            More Info:
+          </p>
+        </div>
+        <div
+          className="makeStyles-labelValueContainer-9"
+        >
+          <p
+            className="MuiTypography-root makeStyles-labelValue-10 MuiTypography-body1"
+          >
+            Panel B
+          </p>
+        </div>
+      </li>
+      <li
+        className="MuiListItem-root makeStyles-listItem-4 MuiListItem-gutters"
+        disabled={false}
+      >
+        <div
+          className="makeStyles-iconContainer-5"
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root makeStyles-icon-6"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+            />
+          </svg>
+        </div>
+        <div
+          className="makeStyles-labelContainer-7"
+        >
+          <p
+            className="MuiTypography-root makeStyles-label-8 MuiTypography-body1"
+          >
+            More Info:
+          </p>
+        </div>
+        <div
+          className="makeStyles-labelValueContainer-9"
+        >
+          <p
+            className="MuiTypography-root makeStyles-labelValue-10 MuiTypography-body1"
+          >
+            Panel B
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

@@ -49,7 +49,7 @@ export default function DropDownPanel() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid="drop-down-panel">
       <Box className={classes.box} bgcolor="primary.main">
         <List className={classes.list}>
           <ListItem className={classes.listItem}>

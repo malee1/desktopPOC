@@ -50,7 +50,7 @@ export default function PanelOne() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid="drop-down-panel-2">
       <Box className={classes.box} bgcolor="primary.main">
         <List className={classes.list}>
           <ListItem className={classes.listItem}>
