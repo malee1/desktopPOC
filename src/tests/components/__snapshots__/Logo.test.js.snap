@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Logo component is present snapshot matches 1`] = `
+<div
+  className="makeStyles-root-1"
+  data-testid="logo"
+>
+  <img
+    alt="logotest"
+    className="makeStyles-image-2"
+    src="/logo192.png"
+  />
+</div>
+`;

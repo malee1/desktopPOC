@@ -18,7 +18,10 @@ const useStyles = makeStyles({
     margin: '0px',
     padding: '0px',
     minWidth: '15vw',
-    backgroundColor: 'lightGrey'
+    // backgroundColor: 'lightGrey',
+    backgroundColor: 'rgb(2,0,36)',
+    background:
+      'linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(189,189,201,1) 0%, rgba(98,150,214,1) 100%)'
   },
   iFrameContainer: {
     flexGrow: 1

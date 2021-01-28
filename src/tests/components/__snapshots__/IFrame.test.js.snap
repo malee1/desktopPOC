@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the iFrame renders matches the snapshot 1`] = `
+<div
+  className="makeStyles-root-1"
+  data-testid="iframe"
+>
+  <iframe
+    allow="encryted-media"
+    allowFullScreen={true}
+    height="100%"
+    src="https://freeklime.co.uk"
+    title="title"
+    width="100%"
+  />
+</div>
+`;

@@ -18,7 +18,7 @@ export default function IFrame() {
   const url = useSelector((state) => state.iFrame.iFrameUrl);
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid="iframe">
       <iframe
         title="title"
         src={url}

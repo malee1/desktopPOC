@@ -8,7 +8,10 @@ const useStyles = makeStyles({
     padding: '20px',
     width: '120px',
     // height: '100px',
-    backgroundColor: 'lightgrey',
+    // backgroundColor: 'lightgrey',
+    backgroundColor: 'rgb(2,0,36)',
+    background:
+      'linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(189,189,201,1) 0%, rgba(98,150,214,1) 100%)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center'

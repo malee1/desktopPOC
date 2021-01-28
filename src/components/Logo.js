@@ -15,7 +15,7 @@ export default function Logo() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid="logo">
       <img className={classes.image} src="/logo192.png" alt="logotest" />
     </div>
   );

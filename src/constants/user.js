@@ -5,9 +5,9 @@ The uncommented user is exported and set in the redux store as the current user 
 */
 
 // initial user
-const user = {
-  fileId: '123456'
-};
+// const user = {
+//   fileId: '123456'
+// };
 
 // business =unit =gamma user
 // const user = {
@@ -15,9 +15,9 @@ const user = {
 // };
 
 // supervisor user
-// const user = {
-//   fileId: '345678'
-// };
+const user = {
+  fileId: '345678'
+};
 
 // additional skillset user
 // const user = {
