@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`panel renders correctly matches the snapshot 1`] = `
+<div
+  className="makeStyles-root-1"
+  data-testid="app-bar"
+>
+  <p
+    className="MuiTypography-root MuiTypography-body1"
+  >
+    App Bar
+  </p>
+  <div
+    className="MuiButtonGroup-root makeStyles-buttonGroup-2 MuiButtonGroup-vertical"
+    role="group"
+  >
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButtonGroup-grouped MuiButtonGroup-groupedVertical MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedVertical MuiButtonGroup-groupedOutlinedPrimary makeStyles-button-3 MuiButton-containedPrimary"
+      data-testid="button"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        test1
+      </span>
+    </button>
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButtonGroup-grouped MuiButtonGroup-groupedVertical MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedVertical MuiButtonGroup-groupedOutlinedPrimary makeStyles-button-3 MuiButton-containedPrimary"
+      data-testid="button"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        test2
+      </span>
+    </button>
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButtonGroup-grouped MuiButtonGroup-groupedVertical MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedVertical MuiButtonGroup-groupedOutlinedPrimary makeStyles-button-3 MuiButton-containedPrimary"
+      data-testid="button"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        test3
+      </span>
+    </button>
+  </div>
+</div>
+`;

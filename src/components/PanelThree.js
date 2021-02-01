@@ -75,10 +75,10 @@ export default function PanelOne() {
   };
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid="panel-three">
       <Box className={classes.box} bgcolor="primary.main">
         <List className={classes.list}>
-          <ListItem className={classes.listItem}>
+          <ListItem className={classes.listItem} data-testid="item">
             <div className={classes.iconContainer}>
               <Notifications className={classes.icon} />
             </div>
@@ -93,7 +93,7 @@ export default function PanelOne() {
               </Typography>
             </div>
           </ListItem>
-          <ListItem className={classes.listItem}>
+          <ListItem className={classes.listItem} data-testid="item">
             <div className={classes.iconContainer}>
               <Announcement className={classes.icon} />
             </div>
@@ -108,7 +108,7 @@ export default function PanelOne() {
               </Typography>
             </div>
           </ListItem>
-          <ListItem className={classes.listItem}>
+          <ListItem className={classes.listItem} data-testid="item">
             <div className={classes.iconContainer}>
               <Notes className={classes.icon} />
             </div>
@@ -123,7 +123,7 @@ export default function PanelOne() {
               </Typography>
             </div>
           </ListItem>
-          <ListItem className={classes.listItem}>
+          <ListItem className={classes.listItem} data-testid="item">
             <div className={classes.iconContainer}>
               <CheckBox className={classes.icon} />
             </div>

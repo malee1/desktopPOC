@@ -40,7 +40,7 @@ export default function AppBar() {
   };
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid="app-bar">
       <Typography>App Bar</Typography>
       <ButtonGroup className={classes.buttonGroup} orientation="vertical" color="primary">
         <Button
@@ -48,6 +48,7 @@ export default function AppBar() {
           variant="contained"
           color="primary"
           onClick={handleButtonOneClick}
+          data-testid="button"
         >
           {buttonOne.name}
         </Button>
@@ -56,6 +57,7 @@ export default function AppBar() {
           variant="contained"
           color="primary"
           onClick={handleButtonTwoClick}
+          data-testid="button"
         >
           {buttonTwo.name}
         </Button>
@@ -64,6 +66,7 @@ export default function AppBar() {
           variant="contained"
           color="primary"
           onClick={handleButtonThreeClick}
+          data-testid="button"
         >
           {buttonThree.name}
         </Button>

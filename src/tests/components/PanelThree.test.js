@@ -4,7 +4,7 @@ import configureMockStore from 'redux-mock-store';
 import renderer from 'react-test-renderer';
 import { cleanup, render, fireEvent } from '@testing-library/react';
 
-import PanelOne from '../../components/PanelOne';
+import PanelThree from '../../components/PanelThree';
 
 const mockStore = configureMockStore();
 const store = mockStore({
@@ -18,10 +18,10 @@ const store = mockStore({
       context: 'test test',
       recording: 'Inactive',
       callInfo: 'ABCDE',
-      alerts: 'Important Info 1',
-      service: 'Alert1',
-      keyInfo: 'Info 1',
-      auth: 'Approved'
+      alerts: 'aaaa',
+      service: 'bbbb',
+      keyInfo: 'cccc',
+      auth: 'dddd'
     }
   }
 });
@@ -36,7 +36,7 @@ describe('the panel renders', () => {
     const tree = renderer
       .create(
         <Provider store={store}>
-          <PanelOne />
+          <PanelThree />
         </Provider>
       )
       .toJSON();
@@ -46,17 +46,17 @@ describe('the panel renders', () => {
   it('has one component', () => {
     const { getAllByTestId } = render(
       <Provider store={store}>
-        <PanelOne />
+        <PanelThree />
       </Provider>
     );
-    const container = getAllByTestId('panel-one');
+    const container = getAllByTestId('panel-three');
     expect(container.length).toBe(1);
   });
 
   it('has four items', () => {
     const { getAllByTestId } = render(
       <Provider store={store}>
-        <PanelOne />
+        <PanelThree />
       </Provider>
     );
     const container = getAllByTestId('item');
@@ -68,14 +68,14 @@ describe('it shows the correct content', () => {
   it('has the correct name', () => {
     const { getAllByText } = render(
       <Provider store={store}>
-        <PanelOne />
+        <PanelThree />
       </Provider>
     );
     // const container = getAllByText('Test Test');
-    expect(getAllByText('Test Test').length).toBe(1);
-    expect(getAllByText('1111').length).toBe(1);
-    expect(getAllByText('2222').length).toBe(1);
-    expect(getAllByText('3333').length).toBe(1);
+    expect(getAllByText('aaaa').length).toBe(1);
+    expect(getAllByText('bbbb').length).toBe(1);
+    expect(getAllByText('cccc').length).toBe(1);
+    expect(getAllByText('dddd').length).toBe(1);
   });
 });
 
@@ -83,10 +83,10 @@ describe('button click works', () => {
   it('on click the function is called', () => {
     const { getByText, getAllByTestId } = render(
       <Provider store={store}>
-        <PanelOne />
+        <PanelThree />
       </Provider>
     );
-    const btn = getByText('More Info');
+    const btn = getByText('More Alert Details');
     fireEvent.click(btn);
     const dropPanel = getAllByTestId('drop-down-panel');
     expect(dropPanel.length).toBe(1);

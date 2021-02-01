@@ -84,10 +84,10 @@ export default function PanelOne() {
   }
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid="panel-two">
       <Box className={classes.box} bgcolor="primary.main">
         <List className={classes.list}>
-          <ListItem className={classes.listItem}>
+          <ListItem className={classes.listItem} data-testid="item">
             <div className={classes.iconContainer}>
               <AccessTime className={classes.icon} />
             </div>
@@ -102,7 +102,7 @@ export default function PanelOne() {
               </Typography>
             </div>
           </ListItem>
-          <ListItem className={classes.listItem}>
+          <ListItem className={classes.listItem} data-testid="item">
             <div className={classes.iconContainer}>
               <Help className={classes.icon} />
             </div>
@@ -117,7 +117,7 @@ export default function PanelOne() {
               </Typography>
             </div>
           </ListItem>
-          <ListItem className={classes.listItem}>
+          <ListItem className={classes.listItem} data-testid="item">
             <div className={classes.iconContainer}>
               <Mic className={classes.icon} />
             </div>
@@ -132,7 +132,7 @@ export default function PanelOne() {
               </Typography>
             </div>
           </ListItem>
-          <ListItem className={classes.listItem}>
+          <ListItem className={classes.listItem} data-testid="item">
             <div className={classes.iconContainer}>
               <RecordVoiceOver className={classes.icon} />
             </div>

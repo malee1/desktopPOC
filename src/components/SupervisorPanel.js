@@ -54,7 +54,7 @@ export default function SupervisorPanel() {
   };
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid="supervisor-panel">
       <Box>
         <Typography>Supervisor</Typography>
       </Box>
@@ -63,8 +63,9 @@ export default function SupervisorPanel() {
         variant="contained"
         color="primary"
         onClick={handleOpenButtonOne}
+        data-testid="button"
       >
-        One
+        View Metrics
       </Button>
       <Drawer
         style={{ width: '30vw' }}
@@ -72,19 +73,26 @@ export default function SupervisorPanel() {
         anchor="right"
         open={openButtonOne}
         classes={{ paper: classes.paper }}
+        data-testid="metrics-drawer"
       >
-        <Typography>Content 1</Typography>
-        <img className={classes.image} src="/images/metrics.png" alt="placeholder metrics" />
-        <Typography>Metrics</Typography>
-        <Typography>Metrics</Typography>
-        <Typography>Metrics</Typography>
-        <Typography>Metrics</Typography>
-        <Typography>Metrics</Typography>
+        <Typography data-testid="metrics-text">Content 1</Typography>
+        <img
+          className={classes.image}
+          src="/images/metrics.png"
+          alt="placeholder metrics"
+          data-testid="image"
+        />
+        <Typography data-testid="metrics-text">Metrics</Typography>
+        <Typography data-testid="metrics-text">Metrics</Typography>
+        <Typography data-testid="metrics-text">Metrics</Typography>
+        <Typography data-testid="metrics-text">Metrics</Typography>
+        <Typography data-testid="metrics-text">Metrics</Typography>
         <Button
           className={classes.button}
           onClick={handleClose}
           variant="contained"
           color="secondary"
+          data-testid="close-button"
         >
           Close
         </Button>
@@ -95,8 +103,9 @@ export default function SupervisorPanel() {
         variant="contained"
         color="primary"
         onClick={handleOpenButtonTwo}
+        data-testid="button"
       >
-        Two
+        View Links
       </Button>
       <Drawer
         style={{ width: '30vw' }}
@@ -104,22 +113,24 @@ export default function SupervisorPanel() {
         anchor="right"
         open={openButtonTwo}
         classes={{ paper: classes.paper }}
+        data-testid="links-drawer"
       >
-        <Typography>Content 2</Typography>
+        <Typography data-testid="links-text">Content 2</Typography>
         <br />
-        <Typography>Useful Links</Typography>
-        <Typography>Useful Links</Typography>
-        <Typography>Useful Links</Typography>
-        <Typography>Useful Links</Typography>
-        <Typography>Useful Links</Typography>
-        <Typography>Useful Links</Typography>
-        <Typography>Useful Links</Typography>
-        <Typography>Useful Links</Typography>
+        <Typography data-testid="links-text">Useful Links</Typography>
+        <Typography data-testid="links-text">Useful Links</Typography>
+        <Typography data-testid="links-text">Useful Links</Typography>
+        <Typography data-testid="links-text">Useful Links</Typography>
+        <Typography data-testid="links-text">Useful Links</Typography>
+        <Typography data-testid="links-text">Useful Links</Typography>
+        <Typography data-testid="links-text">Useful Links</Typography>
+        <Typography data-testid="links-text">Useful Links</Typography>
         <Button
           className={classes.button}
           onClick={handleClose}
           variant="contained"
           color="secondary"
+          data-testid="close-button"
         >
           Close
         </Button>

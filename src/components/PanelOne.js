@@ -143,6 +143,7 @@ export default function PanelOne() {
               onClick={handleDropDown}
               variant="contained"
               color="secondary"
+              data-testid="button"
             >
               <Typography className={classes.buttonLabel} variant="body2">
                 More Info

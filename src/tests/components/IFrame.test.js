@@ -29,7 +29,8 @@ describe('the iFrame renders', () => {
     const { getAllByTestId } = render(
       <Provider store={store}>
         <IFrame />
-      </Provider>);
+      </Provider>
+    );
     const container = getAllByTestId('iframe');
     expect(container.length).toBe(1);
   });
