@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Panel renders correctly matches the snapshot 1`] = `
+<div
+  className="makeStyles-root-1"
+  data-testid="working-window"
+>
+  <div
+    className="makeStyles-appBarContainer-2"
+  >
+    <div
+      className="makeStyles-root-5"
+      data-testid="app-bar"
+    >
+      <h5
+        className="MuiTypography-root MuiTypography-h5"
+      >
+        App Bar
+      </h5>
+      <div
+        className="MuiButtonGroup-root makeStyles-buttonGroup-6 MuiButtonGroup-vertical"
+        role="group"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButtonGroup-grouped MuiButtonGroup-groupedVertical MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedVertical MuiButtonGroup-groupedOutlinedPrimary makeStyles-button-7 MuiButton-containedPrimary"
+          data-testid="button"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            test-1
+          </span>
+        </button>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButtonGroup-grouped MuiButtonGroup-groupedVertical MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedVertical MuiButtonGroup-groupedOutlinedPrimary makeStyles-button-7 MuiButton-containedPrimary"
+          data-testid="button"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            test-2
+          </span>
+        </button>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButtonGroup-grouped MuiButtonGroup-groupedVertical MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedVertical MuiButtonGroup-groupedOutlinedPrimary makeStyles-button-7 MuiButton-containedPrimary"
+          data-testid="button"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            test-3
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="makeStyles-iFrameContainer-3"
+  >
+    <div
+      className="makeStyles-root-10"
+      data-testid="iframe"
+    >
+      <iframe
+        allow="encryted-media"
+        allowFullScreen={true}
+        height="100%"
+        src="test-url"
+        title="title"
+        width="100%"
+      />
+    </div>
+  </div>
+  <div />
+</div>
+`;

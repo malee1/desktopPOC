@@ -56,7 +56,7 @@ export default function SupervisorPanel() {
   return (
     <div className={classes.root} data-testid="supervisor-panel">
       <Box>
-        <Typography>Supervisor</Typography>
+        <Typography variant="h5">Supervisor</Typography>
       </Box>
       <Button
         className={classes.button}
@@ -75,7 +75,9 @@ export default function SupervisorPanel() {
         classes={{ paper: classes.paper }}
         data-testid="metrics-drawer"
       >
-        <Typography data-testid="metrics-text">Content 1</Typography>
+        <Typography variant="h5" data-testid="metrics-text">
+          Content 1
+        </Typography>
         <img
           className={classes.image}
           src="/images/metrics.png"
@@ -115,7 +117,9 @@ export default function SupervisorPanel() {
         classes={{ paper: classes.paper }}
         data-testid="links-drawer"
       >
-        <Typography data-testid="links-text">Content 2</Typography>
+        <Typography variant="h5" data-testid="links-text">
+          Content 2
+        </Typography>
         <br />
         <Typography data-testid="links-text">Useful Links</Typography>
         <Typography data-testid="links-text">Useful Links</Typography>

@@ -57,14 +57,14 @@ export default function WorkingWindow() {
   }, [url, dispatch]);
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid="working-window">
       <div className={classes.appBarContainer}>
         <AppBar />
       </div>
       <div className={classes.iFrameContainer}>
         <IFrame />
       </div>
-      {showSupervisorPanel && <SupervisorPanel />}
+      {showSupervisorPanel && <SupervisorPanel data-testid="supervisor-panel" />}
       <div className={classes.workingWindow}></div>
     </div>
   );

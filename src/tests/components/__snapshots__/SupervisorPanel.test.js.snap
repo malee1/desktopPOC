@@ -8,11 +8,11 @@ exports[`Panel renders correctly matches the snapshot 1`] = `
   <div
     className="MuiBox-root MuiBox-root-6"
   >
-    <p
-      className="MuiTypography-root MuiTypography-body1"
+    <h5
+      className="MuiTypography-root MuiTypography-h5"
     >
       Supervisor
-    </p>
+    </h5>
   </div>
   <button
     className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-2 MuiButton-containedPrimary"

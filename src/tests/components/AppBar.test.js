@@ -10,6 +10,37 @@ import AppBar from '../../components/AppBar';
 const mockStore = configureMockStore();
 
 const store = mockStore({
+  user: {
+    data: {
+      fileId: '123456'
+    }
+  },
+  urls: {
+    urls: {
+      urlOne: {
+        name: 'test1',
+        url: 'testUrlOne'
+      },
+      urlTwo: {
+        name: 'test2',
+        url: 'testUrlTwo'
+      },
+      urlThree: {
+        name: 'test3',
+        url: 'testUrlThree'
+      }
+    }
+  }
+});
+
+const store2 = mockStore({
+  user: {
+    data: {
+      fileId: '567890',
+      roleProfile: 'Alpha',
+      boltOn: 'Accessibility'
+    }
+  },
   urls: {
     urls: {
       urlOne: {
@@ -106,5 +137,17 @@ describe('it dispatches actions on click', () => {
     fireEvent.click(buttonOne);
     expect(store.dispatch).toHaveBeenCalledTimes(1);
     expect(store.dispatch).toHaveBeenCalledWith(setIFrame('testUrlThree'));
+  });
+});
+
+describe('it shows the accessibility button if the bolt on is present on the user profile', () => {
+  it('displays the button correctly', () => {
+    const { getAllByTestId } = render(
+      <Provider store={store2}>
+        <AppBar />
+      </Provider>
+    );
+    const button = getAllByTestId('button1');
+    expect(button.length).toBe(1);
   });
 });

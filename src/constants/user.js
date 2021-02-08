@@ -15,9 +15,9 @@ The uncommented user is exported and set in the redux store as the current user 
 // };
 
 // supervisor user
-const user = {
-  fileId: '345678'
-};
+// const user = {
+//   fileId: '345678'
+// };
 
 // additional skillset user
 // const user = {
@@ -25,8 +25,8 @@ const user = {
 // };
 
 // accessibility user
-// const user = {
-//   fileId: '567890'
-// };
+const user = {
+  fileId: '567890'
+};
 
 export default user;

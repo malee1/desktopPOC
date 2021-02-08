@@ -5,11 +5,11 @@ exports[`panel renders correctly matches the snapshot 1`] = `
   className="makeStyles-root-1"
   data-testid="app-bar"
 >
-  <p
-    className="MuiTypography-root MuiTypography-body1"
+  <h5
+    className="MuiTypography-root MuiTypography-h5"
   >
     App Bar
-  </p>
+  </h5>
   <div
     className="MuiButtonGroup-root makeStyles-buttonGroup-2 MuiButtonGroup-vertical"
     role="group"

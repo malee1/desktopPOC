@@ -1,8 +1,9 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, ButtonGroup, Typography } from '@material-ui/core';
+import { Button, ButtonGroup, Typography, Modal } from '@material-ui/core';
 import { setIFrame } from '../redux/actions';
+import AccessibilityMenu from './AccessibilityMenu';
 
 const useStyles = makeStyles({
   root: {
@@ -15,6 +16,17 @@ const useStyles = makeStyles({
   },
   button: {
     margin: '10px'
+  },
+  accessibility: {
+    height: '45vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-end'
+  },
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 });
 
@@ -26,6 +38,14 @@ export default function AppBar() {
   const buttonThree = useSelector((state) => state.urls.urls.urlThree);
 
   const dispatch = useDispatch();
+
+  const boltOn = useSelector((state) => state.user.data.boltOn);
+  let showAccessibilityButton;
+  if (boltOn === 'Accessibility') {
+    showAccessibilityButton = true;
+  } else showAccessibilityButton = false;
+
+  const [open, setOpen] = useState(false);
 
   const handleButtonOneClick = () => {
     dispatch(setIFrame(`${buttonOne.url}`));
@@ -39,9 +59,13 @@ export default function AppBar() {
     dispatch(setIFrame(`${buttonThree.url}`));
   };
 
+  const handleAccessibilityModal = () => {
+    setOpen(!open);
+  };
+
   return (
     <div className={classes.root} data-testid="app-bar">
-      <Typography>App Bar</Typography>
+      <Typography variant="h5">App Bar</Typography>
       <ButtonGroup className={classes.buttonGroup} orientation="vertical" color="primary">
         <Button
           className={classes.button}
@@ -71,6 +95,24 @@ export default function AppBar() {
           {buttonThree.name}
         </Button>
       </ButtonGroup>
+      {showAccessibilityButton && (
+        <div className={classes.accessibility}>
+          <Button
+            className={classes.button1}
+            variant="contained"
+            color="primary"
+            onClick={handleAccessibilityModal}
+            data-testid="button1"
+          >
+            Accessibility Options
+          </Button>
+          <Modal open={open} onClose={handleAccessibilityModal} className={classes.modal}>
+            <Typography>
+              <AccessibilityMenu />
+            </Typography>
+          </Modal>
+        </div>
+      )}
     </div>
   );
 }

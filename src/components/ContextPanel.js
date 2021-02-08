@@ -61,7 +61,7 @@ export default function ContextPanel() {
   }, [userUrl, dispatch]);
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid="context-panel">
       <div className={classes.logoContainer}>
         <Logo className={classes.logo} />
       </div>
