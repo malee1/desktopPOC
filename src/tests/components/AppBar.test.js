@@ -30,6 +30,9 @@ const store = mockStore({
         url: 'testUrlThree'
       }
     }
+  },
+  accessibility: {
+    accessibility: false
   }
 });
 
@@ -56,6 +59,9 @@ const store2 = mockStore({
         url: 'testUrlThree'
       }
     }
+  },
+  accessibility: {
+    accessibility: false
   }
 });
 
@@ -147,7 +153,21 @@ describe('it shows the accessibility button if the bolt on is present on the use
         <AppBar />
       </Provider>
     );
-    const button = getAllByTestId('button1');
+    const button = getAllByTestId('button-accessibility');
     expect(button.length).toBe(1);
+  });
+});
+
+describe('The button displays the accessibility modal', () => {
+  it('displays the button correctly', () => {
+    const { getAllByTestId, getByText } = render(
+      <Provider store={store2}>
+        <AppBar />
+      </Provider>
+    );
+    const button = getByText('Display');
+    fireEvent.click(button);
+    const modal = getAllByTestId('accessibility-menu');
+    expect(modal.length).toBe(1);
   });
 });

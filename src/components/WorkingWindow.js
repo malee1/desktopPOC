@@ -64,7 +64,7 @@ export default function WorkingWindow() {
       <div className={classes.iFrameContainer}>
         <IFrame />
       </div>
-      {showSupervisorPanel && <SupervisorPanel data-testid="supervisor-panel" />}
+      {showSupervisorPanel && <SupervisorPanel />}
       <div className={classes.workingWindow}></div>
     </div>
   );

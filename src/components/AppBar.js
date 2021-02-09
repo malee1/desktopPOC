@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, ButtonGroup, Typography, Modal } from '@material-ui/core';
+import { Box, Button, ButtonGroup, Typography, Modal } from '@material-ui/core';
 import { setIFrame } from '../redux/actions';
 import AccessibilityMenu from './AccessibilityMenu';
 
@@ -98,18 +98,23 @@ export default function AppBar() {
       {showAccessibilityButton && (
         <div className={classes.accessibility}>
           <Button
-            className={classes.button1}
+            className={classes.button}
             variant="contained"
             color="primary"
             onClick={handleAccessibilityModal}
-            data-testid="button1"
+            data-testid="button-accessibility"
           >
-            Accessibility Options
+            Display
           </Button>
-          <Modal open={open} onClose={handleAccessibilityModal} className={classes.modal}>
-            <Typography>
+          <Modal
+            open={open}
+            onClose={handleAccessibilityModal}
+            className={classes.modal}
+            data-testid="modal"
+          >
+            <Box>
               <AccessibilityMenu />
-            </Typography>
+            </Box>
           </Modal>
         </div>
       )}

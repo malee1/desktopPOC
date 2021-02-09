@@ -1,6 +1,8 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, Button } from '@material-ui/core';
+import { setAccessibility } from '../redux/actions';
 
 const useStyles = makeStyles({
   root: {
@@ -25,6 +27,13 @@ const useStyles = makeStyles({
 export default function AccessibilityMenu() {
   const classes = useStyles();
 
+  const dispatch = useDispatch();
+  const optionOneSelection = useSelector((state) => state.accessibility.accessibility);
+
+  const handleOptionOneClick = () => {
+    dispatch(setAccessibility(!optionOneSelection));
+  };
+
   return (
     <div className={classes.root} data-testid="accessibility-menu">
       <Box>
@@ -39,9 +48,10 @@ export default function AccessibilityMenu() {
             className={classes.button}
             variant="contained"
             color="primary"
+            onClick={handleOptionOneClick}
             data-testid="button"
           >
-            Display Option One
+            Toggle Display Option One
           </Button>
         </Box>
       </Box>

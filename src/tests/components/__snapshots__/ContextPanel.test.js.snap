@@ -21,6 +21,7 @@ exports[`the panel renders matches the snapshot 1`] = `
   </div>
   <div
     className="makeStyles-panelContainer-3"
+    data-testid="panel-container"
   >
     <div
       className="makeStyles-root-6"

@@ -26,3 +26,10 @@ export const getUser = (user) => {
     payload: user
   };
 };
+
+export const setAccessibility = (accessibility) => {
+  return {
+    type: 'SETACCESSIBILITY',
+    payload: accessibility
+  };
+};

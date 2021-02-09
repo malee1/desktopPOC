@@ -1,11 +1,13 @@
 import { React, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import Logo from './Logo';
 import PanelOne from './PanelOne';
 import PanelTwo from './PanelTwo';
 import PanelThree from './PanelThree';
+import PanelOneAccess from './PanelOneAccess';
+// import PanelAccess from './PanelAccess';
 import { getCustomerApi, getUserApi } from '../constants/api';
 import { getCustomer, getUser } from '../redux/actions';
 import user from '../constants/user';
@@ -33,6 +35,8 @@ export default function ContextPanel() {
 
   const customerUrl = getCustomerApi;
   const userUrl = getUserApi;
+
+  const showAccessibilityPanel = useSelector((state) => state.accessibility.accessibility);
 
   const dispatch = useDispatch();
 
@@ -63,10 +67,12 @@ export default function ContextPanel() {
   return (
     <div className={classes.root} data-testid="context-panel">
       <div className={classes.logoContainer}>
-        <Logo className={classes.logo} />
+        <Logo className={classes.logo} data-testid="logo" />
       </div>
-      <div className={classes.panelContainer}>
-        <PanelOne className={classes.panel} />
+      <div className={classes.panelContainer} data-testid="panel-container">
+        {/* <PanelOne className={classes.panel} /> */}
+        {/* <PanelOneAccess /> */}
+        {showAccessibilityPanel ? <PanelOneAccess /> : <PanelOne />}
         <PanelTwo className={classes.panel} />
         <PanelThree className={classes.panel} />
       </div>

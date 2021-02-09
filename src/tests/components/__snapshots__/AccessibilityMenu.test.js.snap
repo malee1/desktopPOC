@@ -26,6 +26,7 @@ exports[`panel renders correctly matches the snapshot 1`] = `
         data-testid="button"
         disabled={false}
         onBlur={[Function]}
+        onClick={[Function]}
         onDragLeave={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -42,7 +43,7 @@ exports[`panel renders correctly matches the snapshot 1`] = `
         <span
           className="MuiButton-label"
         >
-          Display Option One
+          Toggle Display Option One
         </span>
       </button>
     </div>
