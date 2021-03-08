@@ -19,11 +19,6 @@ const user = {
 //   fileId: '345678'
 // };
 
-// additional skillset user
-// const user = {
-//   fileId: '456789'
-// };
-
 // accessibility user
 // const user = {
 //   fileId: '567890'
